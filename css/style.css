@@ -1,0 +1,28 @@
+.centro{
+    text-align: center;
+}
+
+.imagem{
+    width: 50%;
+}
+
+.painel.pane {
+    background-color: #000;
+    position: absolute;
+    height: 100%;
+}
+
+.aviso {
+    position: relative;
+    margin-top: 10em;
+}
+
+.aviso h2{
+    text-align: center;
+    color: #fff;
+    padding: 0 2em;
+}
+
+canvas{
+    background-image: url('/img/background.gif');
+}
