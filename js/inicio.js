@@ -1,12 +1,4 @@
-var imagens = ["img/inicio.jpeg", "img/inicioinvertido.png"],
-    contador = 1,
-
-    inverterImagem = function(){
-        document.getElementById("imagem").src = imagens[contador % imagens.length];
-        contador++;
-    },
-    
-    imagemIntervalo = setInterval(inverterImagem, 30);
+var contador = 1;
 
 angular.module('starter.controllers', [])
 
@@ -26,9 +18,9 @@ angular.module('starter.controllers', [])
     
     $scope.dificuldade = function(){
         window.location.href = "dificuldade.html";
-    }
+    };
     
     $scope.sobre = function(){
         window.location.href = "sobre.html";
-    }
+    };
 });

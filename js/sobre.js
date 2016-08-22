@@ -1,7 +1,11 @@
 angular.module('starter.controllers', [])
+.controller('SobreController', function($scope, $rootScope, $ionicPlatform) {
+ 
+    $scope.voltar = back;
 
-.controller('SobreController', function($scope) { 
-    $scope.voltar = function () {
+    function back(){
         window.location.href = "index.html";
     }
+
+    voltar(back, $scope, $rootScope, $ionicPlatform);
 });

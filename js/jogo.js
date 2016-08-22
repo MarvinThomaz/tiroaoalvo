@@ -92,7 +92,7 @@ var contador = 1,
     
 angular.module('starter.controllers', [])
 
-.controller('AcertoController', function($scope, $timeout, $q, $ionicPopup) { 
+.controller('AcertoController', function($scope, $rootScope, $ionicPlatform) { 
    
     $scope.pontuar = function() {
         
@@ -101,10 +101,14 @@ angular.module('starter.controllers', [])
         
         somarPonto(x, y);  
     }
-    
-    $scope.voltar = function(){
+     
+    $scope.voltar = back;
+
+    function back(){
         window.location.href = "index.html";
-    } 
+    }
+
+    voltar(back, $scope, $rootScope, $ionicPlatform);
 });
 
 var desenhoIntervalo = setInterval(desenha, velocidade),

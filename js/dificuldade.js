@@ -2,8 +2,8 @@ var itemNivel = localStorage.getItem("nivel");
 
 angular.module('starter.controllers', [])
 
-.controller('DificuldadeController', function($scope) { 
-    
+.controller('DificuldadeController', function($scope, $rootScope,  $ionicPlatform) { 
+
     $scope.nivel = [
             { text: 'Fácil', value: 600 }, 
             { text: 'Normal', value: 500 }, 
@@ -13,12 +13,16 @@ angular.module('starter.controllers', [])
    
     $scope.data = { nivel: itemNivel != null && itemNivel != undefined ? itemNivel : 500 };
    
-    $scope.voltar = function() {
-        window.location.href = "index.html";
-    }
+    $scope.voltar = back;
 
     $scope.confirmar = function(nivel){
         localStorage.setItem("nivel", nivel);
         window.location.href = "index.html";
     }
+
+    function back(){
+        window.location.href = "index.html";
+    }
+
+    voltar(back, $scope, $rootScope, $ionicPlatform);
 });

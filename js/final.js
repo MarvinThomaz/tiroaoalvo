@@ -5,10 +5,14 @@ angular.module('starter.controllers', [])
     $scope.reiniciar = function() {
         window.location.href = "jogo.html";
     };
-    
-    $scope.voltar = function() {
+     
+    $scope.voltar = back;
+
+    function back(){
         window.location.href = "index.html";
-    }; 
+    }
+
+    voltar(back, $scope, $rootScope, $ionicPlatform);
     
     $scope.carregarPontuacao = function(){ 
         var pontuacao = localStorage.getItem("pontuacaoFinal"); 
