@@ -6,7 +6,7 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/inicio.css" rel="stylesheet">
     
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="cordova.js"></script>
@@ -15,19 +15,25 @@
     <script src="js/inicio.js"></script>
   </head>
   <body ng-app="starter">
-      <ion-pane class="inicio-area">
+      <ion-pane>
         <ion-content scroll="false">
-          <h1 class="index-title">Psicod&#xE9;lico</h1>
-          <div class="play" >
-            <a href="jogo.html">
-              <img src="img/play.gif"/>
-            </a>
+          <div class="titulo">
+            <h1>Psicodélico</h1>
+            </div>
+          <div class="row row-center jogo">
+            <div class="col col-10"></div>
+            <div class="col col-80">
+              <a href="jogo.html">
+                <img src="img/play.gif"/>
+              </a>
+            </div>
+            <div class="col col-10"></div>
           </div>
-          <div class="inicio-icons">
-              <a href="pontuacao.html"><i class="icon ion-trophy"></i></a>
-              <a href="dificuldade.html"><i class="icon ion-speedometer"></i></a>       
-              <a href="sobre.html"><i class="icon ion-information-circled"></i></a>        
-              <a href="aviso.html"><i class="icon ion-alert-circled"></i></a>       
+          <div class="row row-bottom menu-jogo">
+            <div class="col"><a href="pontuacao.html"><i class="icon ion-trophy"></i></a></div>
+            <div class="col"><a href="dificuldade.html"><i class="icon ion-speedometer"></i></a></div>
+            <div class="col"><a href="sobre.html"><i class="icon ion-information-circled"></i></a></div>
+            <div class="col"><a href="aviso.html"><i class="icon ion-alert-circled"></i></a></div>
           </div>
         </ion-content>
       </ion-pane>
