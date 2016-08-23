@@ -1,53 +1,49 @@
 angular.module('starter.controllers', [])
 
-.controller('FimController', function($scope) { 
+.controller('FimController', function($scope, $rootScope, $ionicPlatform) { 
    
-    $scope.reiniciar = function() {
-        window.location.href = "jogo.html";
-    };
-     
-    $scope.voltar = back;
-
-    function back(){
-        window.location.href = "index.html";
-    }
-
     voltar(back, $scope, $rootScope, $ionicPlatform);
     
-    $scope.carregarPontuacao = function(){ 
-        var pontuacao = localStorage.getItem("pontuacaoFinal"); 
-        var itemNivel = localStorage.getItem("nivel");
-        var nivel = itemNivel != null && itemNivel != undefined ? itemNivel : 500;
-        
-        insertirPontuacao(nivel, pontuacao);
-    };
+    $scope.voltar = back;
+    $scope.dados = {};
+    $scope.dados.pontuacao = localStorage.getItem("pontuacaoFinal");
+    $scope.dados.nivel = localStorage.getItem("nivel") != null ? localStorage.getItem("nivel") : 500;
+    
+    var maiorPontuacao = obterMaiorPontuacaoPorNivel($scope.dados.nivel);
+
+    $scope.dados.mensagem = $scope.dados.pontuacao > maiorPontuacao.pontuacao ? "Parabéns! Essa é a sua maior pontuação." : "";
+
+    if($scope.dados.mensagem != "")
+        localStorage.setItem(maiorPontuacao.tipo, maiorPontuacao.pontuacao);
+    else
+        $scope.dados.mensagem = "Pontuação Final"
 });
 
-var insertirPontuacao = function(nivel, pontuacao){
+function obterMaiorPontuacaoPorNivel (nivel){
     nivel = parseInt(nivel);
     
+    var nome;
+
     switch(nivel){
         case 600:
-            verificarMaiorPontuacao(localStorage.getItem("maiorPontuacaoFacil"), pontuacao, "maiorPontuacaoFacil");
+            nome = "maiorPontuacaoFacil";
             break;
         case 500:
-            verificarMaiorPontuacao(localStorage.getItem("maiorPontuacaoNormal"), pontuacao, "maiorPontuacaoNormal");
+            nome = "maiorPontuacaoNormal";
             break;
         case 300:
-            verificarMaiorPontuacao(localStorage.getItem("maiorPontuacaoDificil"), pontuacao, "maiorPontuacaoDificil");
+            nome = "maiorPontuacaoDificil";
             break;
         case 200:
-            verificarMaiorPontuacao(localStorage.getItem("maiorPontuacaoInsano"), pontuacao, "maiorPontuacaoInsano");
+            nome = "maiorPontuacaoInsano";
             break;
     }
-},
 
-verificarMaiorPontuacao = function(maiorPontuacao, pontuacao, nome){
-    if(maiorPontuacao < pontuacao){
-        var pontuacaoTexto = document.getElementById("pontuacaoFinalMensagem"); 
-        var elementoPontuacao = document.getElementById("pontuacaoFinal");
-        localStorage.setItem(nome, pontuacao);
-        pontuacaoTexto.innerText = "Parabéns! Essa é a sua maior pontuação.";
-        elementoPontuacao.innerText = pontuacao;
-    }
-};
+    var pontuacao = localStorage.getItem(nome);
+
+    return {tipo: nome, pontuacao: pontuacao != "null" ? pontuacao : 0};
+}
+
+function back(){
+    window.location.href = "index.html";
+}

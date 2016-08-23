@@ -5,8 +5,4 @@ angular.module('starter.controllers', [])
     $scope.sair = function() {
         ionic.Platform.exitApp();
     }
-    
-    $scope.continuar = function(){
-        window.location.href = "index.html";
-    }
 });

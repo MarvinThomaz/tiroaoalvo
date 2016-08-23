@@ -24,5 +24,9 @@
 }
 
 canvas{
-    background-image: url('/img/background.gif');
+    background-image: url('../img/background.gif');
+}
+
+.button{
+    font-size: 1.5em;
 }

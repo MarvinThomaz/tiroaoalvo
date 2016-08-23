@@ -15,7 +15,7 @@
     <script src="js/final.js"></script>
   </head>
   <body ng-app="starter">
-      <ion-pane>
+      <ion-pane ng-controller="FimController">
         <ion-header-bar class="bar bar-header bar-assertive">
           <h1 class="title">Fim de jogo!</h1>
         </ion-header-bar>
@@ -23,14 +23,14 @@
           <div>       
             <div class="item item-thumbnail-left">
               <img src="img/pontuacaoFinal.png" class="icon">
-              <h2 id="pontuacaoFinalMensagem">Pontuação Final</h2>
-              <h1 class="pontuacao-final" id="pontuacaoFinal" ng-controller="FimController" ng-value="carregarPontuacao();"></h1>
+              <h2>{{dados.mensagem}}</h2>
+              <h1>{{dados.pontuacao}}</h1>
             </div>
             <div>
-              <button class="button button-block button-dark" ng-controller="FimController" ng-click="reiniciar();">Reiniciar</button>
+              <a href="jogo.html" class="button button-block button-dark">Reiniciar</a>
             </div>          
             <div>
-              <button class="button button-block button-dark" ng-controller="FimController" ng-click="voltar();">Voltar</button>
+              <button class="button button-block button-dark" ng-click="voltar();">Voltar</button>
             </div>
           </div>
         </ion-content>
