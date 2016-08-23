@@ -1,3 +1,8 @@
+@import '../fonts/Oswald-Bold.ttf';
+@import '../fonts/Oswald-Light.ttf';
+@import '../fonts/Oswald-Regular.ttf';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
 .centro{
     text-align: center;
 }
@@ -29,4 +34,31 @@ canvas{
 
 .button{
     font-size: 1.5em;
+}
+
+.play{
+    text-align: center;
+}
+
+.play img{
+    width: 25%;
+}
+
+.index-title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 500%;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inicio-icons{
+    text-align: center;
+    font-size: 300%;
+    margin-top: 5%;
+}
+
+.inicio-icons a{
+    color: black;
+    padding: 5%;
 }
