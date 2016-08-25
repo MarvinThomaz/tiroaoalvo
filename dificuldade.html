@@ -6,29 +6,23 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    
+    <link href="css/padroes.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="cordova.js"></script>
     <script src="js/utilitarios.js"></script>
     <script src="js/app.js"></script>
     <script src="js/dificuldade.js"></script>
   </head>
-  <body ng-app="starter">
-      <ion-pane ng-controller="DificuldadeController">
-        <ion-header-bar class="bar bar-header bar-assertive">
-          <h1 class="title">Selecione o Nível de Dificuldade</h1>
-        </ion-header-bar>
-        <ion-content scroll="false">
-          <div>   
-            <ion-list>
-                <ion-radio ng-model="data.nivel" ng-value="item.value" ng-repeat="item in nivel">{{item.text}}</ion-radio>
-            </ion-list>
-          </div>
-        </ion-content>
-        <ion-footer-bar class="bar bar-footer bar-dark">           
-            <button class="button button-clear" ng-click="voltar();">Voltar</button>
-            <button class="button button-clear" ng-click="confirmar(data.nivel);">Confirmar</button>
-        </ion-footer-bar>
-      </ion-pane>
+  <body ng-app="starter" ng-controller="DificuldadeController">
+        <div class="row titulo">
+          <h1>Selecione o Nível de Dificuldade</h1>
+        </div> 
+        <div class="row item" ng-repeat="item in nivel">
+            <ion-radio class="radio" ng-model="data.nivel" ng-value="item.value">{{item.text}}</ion-radio>
+        </div>
+        <div class="row rodape">           
+            <a class="botao-rodape botao-esquerdo" ng-click="voltar();"><i class="ion-ios-arrow-thin-left"></i></a>
+            <a class="botao-rodape botao-esquerdo" ng-click="confirmar(data.nivel);"><i class="ion-ios-checkmark-empty"></i></a>
+        </div>
   </body>
 </html>
