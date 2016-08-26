@@ -20,3 +20,7 @@ function voltar(acao, scope, rootscope, ionicplatform){
         deregisterSoftBack();
     });
 }
+
+function vibrar(cordovaVibration){
+    cordovaVibration.vibrate(100);
+}
