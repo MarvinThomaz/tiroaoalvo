@@ -20,9 +20,9 @@
         <div class="row item" ng-repeat="item in nivel">
             <ion-radio class="radio" ng-model="data.nivel" ng-value="item.value">{{item.text}}</ion-radio>
         </div>
-        <div class="row rodape">           
-            <a class="botao-rodape botao-esquerdo" ng-click="voltar();"><i class="ion-ios-arrow-thin-left"></i></a>
-            <a class="botao-rodape botao-esquerdo" ng-click="confirmar(data.nivel);"><i class="ion-ios-checkmark-empty"></i></a>
+        <div class="row rodape">
+          <div class="col texto-esquerda"><a href="#" class="botao-rodape botao-esquerdo" ng-click="voltar();"><i class="ion-ios-arrow-thin-left"></i></a></div>
+          <div class="col texto-direita"><a href="#" class="botao-rodape botao-direito" ng-click="confirmar(data.nivel);"><i class="ion-ios-checkmark-empty"></i></a></div>
         </div>
   </body>
 </html>

@@ -5,6 +5,14 @@ p, h1, h2, h3, h4, a, ul, li, div, body, tr, span{
     font-weight: lighter;
 }
 
+a{
+    color: black;
+}
+
+p{
+    text-align: justify;
+}
+
 .titulo{
     border: none;
     text-transform: uppercase;
@@ -21,12 +29,16 @@ p, h1, h2, h3, h4, a, ul, li, div, body, tr, span{
     width: 100%;
 }
 
-.botao-rodape i, a, button, input{
+.botao-rodape i, .botao-rodape a, .botao-rodape button, .botao-rodape input{
     color:white;
 }
 
-.botao-esquerdo{
+.texto-esquerda{
     text-align: left;
+}
+
+.texto-direita{
+    text-align: right;
 }
 
 .radio{
@@ -58,8 +70,23 @@ p, h1, h2, h3, h4, a, ul, li, div, body, tr, span{
         padding-left: 20px;
     }
 
+    .botao-direito{
+        padding-right: 20px;
+    }
+
     .rodape{
         padding-top: 10px;
+    }
+
+    p, a{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 17px;
+    }
+
+    i{
+        padding-left: 20px;
+        font-size: 25px;
     }
 }
 
@@ -86,7 +113,22 @@ p, h1, h2, h3, h4, a, ul, li, div, body, tr, span{
         padding-left: 15px;
     }
 
+    .botao-direito{
+        padding-right: 15px;
+    }
+
     .rodape{
         padding-top: 7px;
+    }
+
+    p, a{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 13px;
+    }
+
+    i{
+        padding-left: 15px;
+        font-size: 17px;
     }
 }

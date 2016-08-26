@@ -1,0 +1,43 @@
+body, h1{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+.rodape{
+    background-color: white;
+}
+
+.rodape i{
+    color: black;
+}
+
+.aviso{
+    text-align: center;
+}
+
+.titulo i{
+    color: yellow;
+}
+
+@media (min-width: 425px){
+    p{
+        line-height: 40px;
+        font-size: 30px!important;
+    }
+    
+    .titulo i{
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 424px){
+    p{
+        line-height: 30px;
+        font-size: 20px!important;
+    }
+    
+    .titulo i{
+        font-size: 35px;
+    }
+}
