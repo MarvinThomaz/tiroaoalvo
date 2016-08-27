@@ -28,7 +28,7 @@ angular.module('starter.controllers', ['ngCordova'])
 
     $scope.recomecar = function(){
         vibrar($cordovaVibration);
-        __doPostBack();
+        location.reload();
     };
 
     $ionicPlatform.ready(function(){       
@@ -46,7 +46,7 @@ angular.module('starter.controllers', ['ngCordova'])
         if($scope.jogo.tempo == 0){
             $('.final').fadeIn();
 
-            var pontuacao = parseInt(localStorage.getItem('pontuacao'));
+            var pontuacao = localStorage.getItem('pontuacao')  == null ? 0 : parseInt(localStorage.getItem('pontuacao'));
 
             if(pontuacao < $scope.jogo.pontuacao){
                 $('.trofeu').show();

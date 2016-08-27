@@ -37,6 +37,7 @@ html, body{
 @media (min-height: 600px){   
     .pontuacao{
         height: 10%;
+        padding-top: 1%!important;
     }
 
     .area-jogo{
@@ -50,6 +51,7 @@ html, body{
 
 @media (max-height: 599px){   
     .pontuacao{
+        padding-top: 2%!important;
         height: 15%;
     }
 
@@ -76,11 +78,26 @@ html, body{
     }
     
     .pontuacao{
+        margin-top: 15px;
         margin-bottom: 15px;
     }
 
-    .final a{
-        margin: 10px; 
+    .final h1{
+        font-size: 50px;
+    }
+
+    .final h2{
+        font-size: 40px;
+    }
+
+    .final i{
+        font-size: 35px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .final{        
+        line-height: 50px;
     }
 }
 
@@ -99,5 +116,27 @@ html, body{
 
     .pontuacao{
         margin-bottom: 10px;
+    }
+
+    .final h1{
+        font-size: 40px;
+    }
+
+    .final h2{
+        font-size: 30px;
+    }
+
+    .final i{
+        font-size: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .final{        
+        line-height: 40px;
+    }
+
+    .trofeu{
+        padding: 0!important;
     }
 }

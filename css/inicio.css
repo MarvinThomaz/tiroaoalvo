@@ -68,17 +68,29 @@
     .titulo h1{
         margin-top: 120px;
     }
+
+    .menu-jogo a{
+        font-size: 70px;
+    }
 }
 
 @media (min-height: 698px) and (max-height: 716px){
     .titulo h1{
         margin-top: 90px;
     }
+
+    .menu-jogo a{
+        font-size: 60px;
+    }
 }
 
 @media (min-height: 481px) and (max-height: 697px){
     .titulo h1{
         margin-top: 20px;
+    }
+
+    .menu-jogo a{
+        font-size: 50px;
     }
 }
 
@@ -89,5 +101,9 @@
 
     .jogo img{
         width: 150px;
+    }
+
+    .menu-jogo a{
+        font-size: 40px;
     }
 }
