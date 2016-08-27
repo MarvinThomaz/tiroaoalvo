@@ -8,6 +8,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/padroes.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
     <script src="js/utilitarios.js"></script>
     <script src="js/app.js"></script>
@@ -21,8 +22,8 @@
             <ion-radio class="radio" ng-model="data.nivel" ng-value="item.value">{{item.text}}</ion-radio>
         </div>
         <div class="row rodape">
-          <div class="col texto-esquerda"><a href="#" class="botao-rodape botao-esquerdo" ng-click="voltar();"><i class="ion-ios-arrow-thin-left"></i></a></div>
-          <div class="col texto-direita"><a href="#" class="botao-rodape botao-direito" ng-click="confirmar(data.nivel);"><i class="ion-ios-checkmark-empty"></i></a></div>
+          <div class="col texto-esquerda"><a href="index.html" class="botao-rodape botao-esquerdo" ng-click="vibracao();"><i class="ion-android-arrow-back"></i></a></div>
+          <div class="col texto-direita"><a href="#" class="botao-rodape botao-direito" ng-click="confirmar(data.nivel);"><i class="ion-android-done"></i></a></div>
         </div>
   </body>
 </html>

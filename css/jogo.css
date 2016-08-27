@@ -1,3 +1,103 @@
-canvas{
+i, a{
+    padding: 0;
+}
+
+.header{
+    position: static;
+}
+
+.final{
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-color: black;
+    text-align: center;
+}
+
+.final h1, .final h2, .menu-final i{
+    color: white;
+    text-transform: uppercase;
+}
+
+.trofeu{
+    display: none;
+    color: gold;
+}
+
+.area-jogo{
     background-image: url('../img/background.gif');
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-height: 600px){   
+    .pontuacao{
+        height: 10%;
+    }
+
+    .area-jogo{
+        height: 90%;
+    }
+
+    .final{
+        padding-top: 200px;
+    }
+}
+
+@media (max-height: 599px){   
+    .pontuacao{
+        height: 15%;
+    }
+
+    .area-jogo{
+        height: 85%;
+    }
+    
+    .final{
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 425px){
+    i, p, a, span, h1{
+        font-size: 35px;
+    }
+
+    .texto-esquerda{
+        padding-left: 30px;
+    }
+
+    .texto-direita{
+        padding-right: 30px;
+    }
+    
+    .pontuacao{
+        margin-bottom: 15px;
+    }
+
+    .final a{
+        margin: 10px; 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 424px){ 
+    i, p, a, span, h1{
+        font-size: 25px;
+    }  
+
+    .texto-esquerda{
+        padding-left: 20px;
+    }
+
+    .texto-direita{
+        padding-right: 20px;
+    }
+
+    .pontuacao{
+        margin-bottom: 10px;
+    }
 }

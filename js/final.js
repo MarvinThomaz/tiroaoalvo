@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('FimController', function($scope, $rootScope, $ionicPlatform) { 
+.controller('FimController', function($scope, $rootScope, $ionicPlatform, $cordovaVibration) { 
    
     voltar(back, $scope, $rootScope, $ionicPlatform);
     
@@ -17,33 +17,34 @@ angular.module('starter.controllers', [])
         localStorage.setItem(maiorPontuacao.tipo, maiorPontuacao.pontuacao);
     else
         $scope.dados.mensagem = "Pontuação Final"
-});
+        
+    function obterMaiorPontuacaoPorNivel (nivel){
+        nivel = parseInt(nivel);
+        
+        var nome;
 
-function obterMaiorPontuacaoPorNivel (nivel){
-    nivel = parseInt(nivel);
-    
-    var nome;
+        switch(nivel){
+            case 600:
+                nome = "maiorPontuacaoFacil";
+                break;
+            case 500:
+                nome = "maiorPontuacaoNormal";
+                break;
+            case 300:
+                nome = "maiorPontuacaoDificil";
+                break;
+            case 200:
+                nome = "maiorPontuacaoInsano";
+                break;
+        }
 
-    switch(nivel){
-        case 600:
-            nome = "maiorPontuacaoFacil";
-            break;
-        case 500:
-            nome = "maiorPontuacaoNormal";
-            break;
-        case 300:
-            nome = "maiorPontuacaoDificil";
-            break;
-        case 200:
-            nome = "maiorPontuacaoInsano";
-            break;
+        var pontuacao = localStorage.getItem(nome);
+
+        return {tipo: nome, pontuacao: pontuacao != "null" ? pontuacao : 0};
     }
 
-    var pontuacao = localStorage.getItem(nome);
-
-    return {tipo: nome, pontuacao: pontuacao != "null" ? pontuacao : 0};
-}
-
-function back(){
-    window.location.href = "index.html";
-}
+    function back(){
+        vibrar($cordovaVibration);
+        window.location.href = "index.html";
+    }
+});

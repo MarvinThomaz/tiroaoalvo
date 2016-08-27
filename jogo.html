@@ -6,24 +6,38 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/padroes.css" rel="stylesheet">
     <link href="css/jogo.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="js/utilitarios.js"></script>
     <script src="cordova.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/utilitarios.js"></script>
+    <script src="js/jogo.js"></script>
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter" id='bd' class="jogo">
-    <ion-pane ng-controller="AcertoController">
-      <ion-header-bar class="bar bar-header bar-assertive">
-        <h1 class="title" id="tempoPontuacao">
-          <i class="icon ion-ios-timer-outline"></i> <span id="tempo">0</span> - <span id="pontuacao">0</span> <i class="icon ion-ios-circle-filled"></i>
-        </h1>
-        <button class="button" ng-click="voltar();">Sair</button>
-      </ion-header-bar>
-      <ion-content id="areaJogo" scroll="false">
-        <canvas id="tela" width="10000" height="10000" ng-click="pontuar()"></canvas>
-      </ion-content>
-    </ion-pane>
+  <body ng-app="starter" id='bd' class="jogo" ng-controller="AcertoController">
+      <div class="row final">
+        <h1>Fim de jogo!!</h1>
+
+        <h2>{{jogo.pontuacao}}<i class="ion-trophy trofeu"></i></h2>
+
+        <a href="#" class="menu-final" ng-click="recomecar()"><i class="ion-refresh"></i></a><a href="index.html" class="menu-final" ng-click="vibracao()"><i class="ion-android-home"></i></a>
+      </div>
+      <div class="row pontuacao header">
+        <div class="col col-75 texto-esquerda">
+          <h1>
+            <i class="ion-android-time"></i> {{jogo.tempo}} - {{jogo.pontuacao}} <i class="ion-android-radio-button-off"></i>
+          </h1>
+        </div>
+        <div class="col col-25 texto-direita">
+          <h1>
+            <a href="index.html" class="botao-titulo" ng-click="vibracao();"><i class="ion-android-home"></i></a>
+          </h1>
+        </div>            
+      </div>
+      <div class="row area-jogo" scroll="false">
+        <canvas width="0" height="0" ng-click="pontuar()"></canvas>
+      </div>
   </body>
-  <script src="js/jogo.js" type="text/javascript"></script>
 </html>

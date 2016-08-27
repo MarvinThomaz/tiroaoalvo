@@ -1,11 +1,9 @@
-angular.module('starter.controllers', [])
-.controller('SobreController', function($scope, $rootScope, $ionicPlatform) {
+angular.module('starter.controllers', ['ngCordova'])
+.controller('SobreController', function($scope, $rootScope, $ionicPlatform, $cordovaVibration) {
  
-    $scope.voltar = back;
+    $scope.vibracao = function(){
+        vibrar($cordovaVibration);
+    };
 
-    function back(){
-        window.location.href = "index.html";
-    }
-
-    voltar(back, $scope, $rootScope, $ionicPlatform);
+    voltar(function () { location.href = "index.html" }, $scope, $rootScope, $ionicPlatform);
 });

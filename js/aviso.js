@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic', 'ngCordova'])
 
 .controller('AvisoController', function($scope, $cordovaVibration) { 
    

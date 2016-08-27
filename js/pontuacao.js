@@ -1,18 +1,21 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
-    .controller('PontuacaoController', function ($scope, $rootScope, $ionicPlatform) {
+    .controller('PontuacaoController', function ($scope, $rootScope, $ionicPlatform, $cordovaVibration) {
 
-        $scope.voltar = back;
+        $scope.vibracao = function () {
+            vibrar($cordovaVibration);
+        };
+
         $scope.pontuacao = [
-            { modo: 'Fácil', pontuacao: (localStorage.getItem("maiorPontuacaoFacil") == null ? 0 : localStorage.getItem("maiorPontuacaoFacil")) },
-            { modo: 'Normal', pontuacao: (localStorage.getItem("maiorPontuacaoNormal") == null ? 0 : localStorage.getItem("maiorPontuacaoNormal")) },
-            { modo: 'Difícil', pontuacao: (localStorage.getItem("maiorPontuacaoDificil") == null ? 0 : localStorage.getItem("maiorPontuacaoDificil")) },
-            { modo: 'Insano', pontuacao: (localStorage.getItem("maiorPontuacaoInsano") == null ? 0 : localStorage.getItem("maiorPontuacaoInsano")) }
+            { modo: 'Fácil', pontuacao: (get("maiorPontuacaoFacil") == null ? 0 : get("maiorPontuacaoFacil")) },
+            { modo: 'Normal', pontuacao: (get("maiorPontuacaoNormal") == null ? 0 : get("maiorPontuacaoNormal")) },
+            { modo: 'Difícil', pontuacao: (get("maiorPontuacaoDificil") == null ? 0 : get("maiorPontuacaoDificil")) },
+            { modo: 'Insano', pontuacao: (get("maiorPontuacaoInsano") == null ? 0 : get("maiorPontuacaoInsano")) }
         ];
 
-        voltar(back, $scope, $rootScope, $ionicPlatform);
-    });
+        voltar(function () { location.href = "index.html" }, $scope, $rootScope, $ionicPlatform);
 
-function back() {
-    window.location.href = "index.html";
-}
+        function get(nome){
+            return JSON.parse(localStorage.getItem(nome));
+        }
+    });

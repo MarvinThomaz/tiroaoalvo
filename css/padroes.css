@@ -1,6 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Oswald';
 
-p, h1, h2, h3, h4, a, ul, li, div, body, tr, span{
+p, h1, h2, h3, h4, a, ul, li, div, body, tr, span, label{
     font-family: 'Oswald', sans-serif;
     font-weight: lighter;
 }
@@ -39,6 +39,10 @@ p{
 
 .texto-direita{
     text-align: right;
+}
+
+.texto-centro{
+    text-align: center;
 }
 
 .radio{
