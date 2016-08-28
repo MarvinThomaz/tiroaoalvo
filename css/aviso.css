@@ -20,24 +20,35 @@ body, h1{
     color: yellow;
 }
 
-@media (min-width: 425px){
-    p{
-        line-height: 40px;
-        font-size: 30px!important;
-    }
-    
-    .titulo i{
-        font-size: 45px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 424px){
+@media (min-width: 200px) and (min-height: 400px){
     p{
         line-height: 30px;
         font-size: 20px!important;
     }
     
     .titulo i{
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 300px) and (min-height: 500px){
+    p{
+        line-height: 40px;
+        font-size: 30px!important;
+    }
+    
+    .titulo i{
         font-size: 35px;
+    }
+}
+
+@media (min-width: 600px) and (min-height: 900px){
+    p{
+        line-height: 60px;
+        font-size: 50px!important;
+    }
+    
+    .titulo i{
+        font-size: 70px;
     }
 }

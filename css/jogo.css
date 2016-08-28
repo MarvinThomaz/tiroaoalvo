@@ -2,8 +2,21 @@ i, a{
     padding: 0;
 }
 
+.trofeu{
+    padding: 0!important;
+}
+
 .header{
     position: static;
+}
+
+.loading{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    padding: 0;
 }
 
 .final{
@@ -26,6 +39,7 @@ i, a{
 
 .area-jogo{
     background-image: url('../img/background.gif');
+    height: 90%;
 }
 
 html, body{
@@ -34,74 +48,13 @@ html, body{
     padding: 0;
 }
 
-@media (min-height: 600px){   
-    .pontuacao{
-        height: 10%;
-        padding-top: 1%!important;
-    }
-
-    .area-jogo{
-        height: 90%;
-    }
-
-    .final{
-        padding-top: 200px;
-    }
+.pontuacao{       
+    padding-top: 2%!important;
+    height: 10%;
 }
 
-@media (max-height: 599px){   
-    .pontuacao{
-        padding-top: 2%!important;
-        height: 15%;
-    }
 
-    .area-jogo{
-        height: 85%;
-    }
-    
-    .final{
-        padding-top: 150px;
-    }
-}
-
-@media (min-width: 425px){
-    i, p, a, span, h1{
-        font-size: 35px;
-    }
-
-    .texto-esquerda{
-        padding-left: 30px;
-    }
-
-    .texto-direita{
-        padding-right: 30px;
-    }
-    
-    .pontuacao{
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .final h1{
-        font-size: 50px;
-    }
-
-    .final h2{
-        font-size: 40px;
-    }
-
-    .final i{
-        font-size: 35px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .final{        
-        line-height: 50px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 424px){ 
+@media (min-width: 200px) and (min-height: 400px){ 
     i, p, a, span, h1{
         font-size: 25px;
     }  
@@ -115,28 +68,117 @@ html, body{
     }
 
     .pontuacao{
-        margin-bottom: 10px;
+        margin-bottom: 10px;      
     }
 
     .final h1{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .final h2{
-        font-size: 30px;
+        font-size: 20px;
+        padding-top: 10px;
     }
 
     .final i{
         font-size: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .final{        
+        line-height: 130px;
+        padding-top: 100px;
+    }
+
+    .loading img{
+        margin-top: 90px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 300px) and (min-height: 500px){ 
+    i, p, a, span, h1{
+        font-size: 35px;
+    }  
+
+    .texto-esquerda{
+        padding-left: 20px;
+    }
+
+    .texto-direita{
+        padding-right: 20px;
+    }
+
+    .pontuacao{
+        margin-bottom: 10px;  
+    }
+
+    .final h1{
+        font-size: 50px;
+    }
+
+    .final h2{
+        font-size: 40px;
+        padding-top: 20px;
+    }
+
+    .final i{
+        font-size: 35px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .final{        
-        line-height: 40px;
+        line-height: 180px;
+        padding-top: 150px;
     }
 
-    .trofeu{
-        padding: 0!important;
+    .loading img{
+        margin-top: 130px;
+        width: 300px;
+    }
+}
+
+@media (min-width: 600px) and (min-height: 900px){ 
+    i, p, a, span, h1{
+        font-size: 50px;
+    }  
+
+    .texto-esquerda{
+        padding-left: 20px;
+    }
+
+    .texto-direita{
+        padding-right: 20px;
+    }
+
+    .pontuacao{
+        margin-bottom: 10px;  
+    }
+
+    .final h1{
+        font-size: 80px;
+    }
+
+    .final h2{
+        font-size: 70px;
+        padding-top: 35px;
+    }
+
+    .final i{
+        font-size: 60px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .final{        
+        line-height: 250px;
+        padding-top: 200px;
+    }
+
+    .loading img{
+        margin-top: 200px;
+        width: 500px;
     }
 }

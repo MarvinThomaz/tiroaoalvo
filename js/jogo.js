@@ -5,10 +5,15 @@ angular.module('starter.controllers', ['ngCordova'])
     var bola = new Image();
     var height = $('.area-jogo').height();
     var width = $('.area-jogo').width(); 
+    var velocidade = null;
+    var velocidadeinicial = 600;
+    var marca = 0;
+    var tamanho = obterTamanho();
+
 
     $scope.jogo = {};
     $scope.jogo.pontuacao = 0;
-    $scope.jogo.tempo = 45;
+    $scope.jogo.tempo = 30;
 
     $scope.pontuar = function() {
         var x = event.pageX - $('.area-jogo').offset().left;
@@ -32,10 +37,10 @@ angular.module('starter.controllers', ['ngCordova'])
     };
 
     $ionicPlatform.ready(function(){       
-        bola.src = "img/googleplus.png";
+        bola.src = "img/circulo_" + tamanho + ".gif";
 
         bola.onload = function(){
-            $interval(desenhar, 600);
+            velocidade = $interval(desenhar, velocidadeinicial);
             $interval(tempo, 1000);
         }
     });
@@ -53,9 +58,20 @@ angular.module('starter.controllers', ['ngCordova'])
                 localStorage.setItem('pontuacao', $scope.jogo.pontuacao);
             }
         }
+        else if($scope.jogo.pontuacao % 10 == 0 && $scope.jogo.pontuacao != marca)
+        {
+            marca = $scope.jogo.pontuacao;
+            $scope.jogo.tempo += 10;
+            $interval.cancel(velocidade);
+            velocidadeinicial -= 100;
+            velocidade = $interval(desenhar, velocidadeinicial);
+        }
     }
 
     function desenhar(){
+        if($('.loading').length > 0)
+            $('.loading').remove();
+
         $scope.jogo.x = Math.floor((Math.random() * (width - (width * 0.05))));
         $scope.jogo.y = Math.floor((Math.random() * (height - (height * 0.07))));
 
@@ -63,6 +79,17 @@ angular.module('starter.controllers', ['ngCordova'])
         contexto.canvas.height = height;
 
         contexto.drawImage(bola, $scope.jogo.x, $scope.jogo.y);
+    }
+
+    function obterTamanho(){
+        if(screen.width > 600 && screen.height > 900)
+            return 100;
+        else if(screen.width > 400 && screen.height > 700)
+            return 75;
+        else if(screen.width > 200 && screen.height > 400)     
+            return 50;
+        else
+            return 50;
     }
 
     voltar(function () { location.href = "index.html" }, $scope, $rootScope, $ionicPlatform);

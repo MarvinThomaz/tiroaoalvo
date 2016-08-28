@@ -51,62 +51,63 @@ p{
     padding: 10px!important;
 }
 
-@media (min-width: 425px){
-    .titulo h1{ 
-        font-size: 40px;
-        padding: 20px;
-    }
-
-    .item{
-        font-size: 20px;
-        padding: 20px;
-    }
-
-    .item span{
-        padding-top: 10px;
-    }
-
-    .botao-rodape i{
-        font-size: 50px;
-    }
-
-    .botao-esquerdo{
-        padding-left: 20px;
-    }
-
-    .botao-direito{
-        padding-right: 20px;
-    }
-
-    .rodape{
-        padding-top: 10px;
-    }
-
-    p, a{
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 17px;
-    }
-
-    i{
-        padding-left: 20px;
-        font-size: 25px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 424px){
+@media (min-width: 200px) and (min-height: 400px){
     .titulo h1{ 
         font-size: 30px;
         padding: 15px;
     }
 
     .item{
-        font-size: 15px;
+        font-size: 20px;
         padding: 15px;
     }
 
     .item span{
-        padding-top: 7px;
+        padding-top: 30px;
+    }
+
+    .botao-rodape i{
+        font-size: 30px;
+    }
+
+    .botao-esquerdo{
+        padding-left: 10px;
+    }
+
+    .botao-direito{
+        padding-right: 10px;
+    }
+
+    .rodape{
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+    }
+
+    p, a{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 15px;
+    }
+
+    i{
+        padding-left: 15px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 400px) and (min-height: 700px){
+    .titulo h1{ 
+        font-size: 30px;
+        padding: 15px;
+    }
+
+    .item{
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .item span{
+        padding-top: 30px;
     }
 
     .botao-rodape i{
@@ -122,17 +123,63 @@ p{
     }
 
     .rodape{
-        padding-top: 7px;
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
     }
 
     p, a{
         padding-left: 15px;
         padding-right: 15px;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     i{
         padding-left: 15px;
         font-size: 17px;
+    }
+}
+
+@media (min-width: 600px) and (min-height: 900px){
+    .titulo h1{ 
+        font-size: 60px;
+        padding: 30px;
+    }
+
+    .item{
+        font-size: 40px;
+        padding: 30px;
+    }
+
+    .item span{
+        padding-top: 60px;
+    }
+
+    .botao-rodape i{
+        font-size: 80px;
+    }
+
+    .botao-esquerdo{
+        padding-left: 30px;
+    }
+
+    .botao-direito{
+        padding-right: 30px;
+    }
+
+    .rodape{
+        padding-top: 20px!important;
+        padding-bottom: 20px!important;
+    }
+
+    p, a{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    i{
+        padding-left: 30px;
+        font-size: 35px;
     }
 }

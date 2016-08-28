@@ -22,88 +22,140 @@
     color: #000;
 }
 
-@media (min-width: 1024px) {    
+@media (min-width: 200px) and (min-height: 400px){
     .titulo h1{ 
-        font-size: 90px;
+        padding-top: 40px;
+        font-size: 40px;
+    }
+
+    .jogo{
+        padding-top: 40px;
     }
 
     .jogo img{
-        width: 350px;
-    }
-
-    .menu-jogo a{
-        font-size: 45px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px){    
-    .titulo h1{ 
-        font-size: 70px;
-    }
-
-    .jogo img{
-        width: 300px;
+        width: 180px;
     }
 
     .menu-jogo a{
         font-size: 40px;
     }
+
+    div{
+        line-height: 60px;
+    }
 }
 
-@media (min-width: 320px) and (max-width: 767px){    
+@media (min-width: 300px) and (min-height: 550px){
     .titulo h1{ 
+        padding-top: 90px;
         font-size: 40px;
     }
 
+    .jogo{
+        padding-top: 40px;
+    }
+
     .jogo img{
-        width: 250px;
+        width: 180px;
     }
 
     .menu-jogo a{
-        font-size: 25px;
+        font-size: 40px;
+    }
+
+    div{
+        line-height: 60px;
     }
 }
 
-@media (min-height: 717px){
-    .titulo h1{
-        margin-top: 120px;
+@media (min-width: 370px) and (min-height: 660px){
+    .titulo h1{ 
+        padding-top: 90px;
+        font-size: 50px;
     }
 
-    .menu-jogo a{
-        font-size: 70px;
-    }
-}
-
-@media (min-height: 698px) and (max-height: 716px){
-    .titulo h1{
-        margin-top: 90px;
+    .jogo{
+        padding-top: 70px;
     }
 
-    .menu-jogo a{
-        font-size: 60px;
-    }
-}
-
-@media (min-height: 481px) and (max-height: 697px){
-    .titulo h1{
-        margin-top: 20px;
+    .jogo img{
+        width: 220px;
     }
 
     .menu-jogo a{
         font-size: 50px;
     }
+
+    div{
+        line-height: 80px;
+    }
 }
 
-@media (max-height: 480px){
-    .titulo h1{
-        margin-top: 30px;
+@media (min-width: 400px) and (min-height: 730px){
+    .titulo h1{ 
+        padding-top: 100px;
+        font-size: 60px;
+    }
+
+    .jogo{
+        padding-top: 80px;
     }
 
     .jogo img{
-        width: 150px;
+        width: 200px;
     }
 
     .menu-jogo a{
-        font-size: 40px;
+        font-size: 60px;
+    }
+
+    div{
+        line-height: 100px;
+    }
+}
+
+@media (min-width: 600px) and (min-height: 960px){
+    .titulo h1{ 
+        padding-top: 120px;
+        font-size: 100px;
+    }
+
+    .jogo{
+        padding-top: 100px;
+    }
+
+    .jogo img{
+        width: 230px;
+    }
+
+    .menu-jogo a{
+        font-size: 90px;
+    }
+
+    div{
+        line-height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (min-height: 1024px){
+    .titulo h1{ 
+        padding-top: 150px;
+        font-size: 120px;
+    }
+
+    .jogo{
+        padding-top: 100px;
+    }
+
+    .jogo img{
+        width: 270px;
+    }
+
+    .menu-jogo a{
+        font-size: 100px;
+    }
+
+    div{
+        line-height: 200px;
     }
 }
